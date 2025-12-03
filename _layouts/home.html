@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div class="home">
+  {{ content }}
+
+  <section class="posts">
+    <h2>Recent Posts</h2>
+
+    {% for post in site.posts %}
+      <article class="post-item">
+        <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date: "%b %-d, %Y" }}
+        </time>
+        <h3 class="post-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h3>
+        {% if post.excerpt %}
+          <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+        {% endif %}
+      </article>
+    {% endfor %}
+  </section>
+</div>
