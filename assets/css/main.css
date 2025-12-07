@@ -63,6 +63,39 @@ body {
   color: #2d7a3e;
 }
 
+/* Circular Text Animation */
+.circular-text-link {
+  display: inline-block;
+  border-bottom: none;
+}
+
+.circular-text {
+  animation: rotate 20s linear infinite;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.circular-text-path {
+  fill: #313131;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "San Francisco", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 6px;
+  text-transform: lowercase;
+}
+
+.circular-text-link:hover .circular-text-path {
+  fill: #2d7a3e;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
