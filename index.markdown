@@ -1,5 +1,3 @@
 ---
 layout: home
 ---
-
-Chris Selden
